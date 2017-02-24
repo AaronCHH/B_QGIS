@@ -114,12 +114,12 @@ As you'll see in the following steps, this tool can be  used for a variety of ra
 > The Output raster type setting in the Translate tool of the Processing Toolbox can also be used to convert from floating-point rasters to integer rasters and vice versa.  
 With a floating-point raster as the input, choose one of the integer settings to convert the raster to an integer.   
 12. Select the output raster by clicking on the browse button. You can choose to either Save to a temporary file or Save to file. The following screenshot shows the completed Translate tool:
-![](Chapter05/fig5_1.png)
+![](image/fig5_1.png)
 
 The following figure shows the result of raster resampling.  
 The original elevation raster with 27.3526 meter pixel resolution is on the left and the resampled raster with 100 meter pixel resolution is on the right.  
 
-![](Chapter05/fig5_1-2.png)
+![](image/fig5_1-2.png)
 
 > There are two additional tools that can be used to resample raster data, and both are found in the Processing Toolbox.  
 Under __GRASS commands | Raster tools__ there is the __r.resample__ tool.  
@@ -138,9 +138,9 @@ The following are guides for installing and troubleshooting SAGA on each operati
 
 If you encounter the missing dependencies error, perform the following steps:  
 1.  Open SAGA by navigating to __Processing | Options | Providers__ and uncheck Use SAGA 2.0.8 syntax:  
-![](Chapter05/image208.jpeg)  
+![](image/image208.jpeg)  
 2.  If you still get the error, identify the installation path for SAGA. In QGIS, navigate to __Settings | Options | System__ and make sure that the __PATH__ variable includes the value for the path to the SAGA binaries. This can be found under Current environment variables, as shown in the following screenshot:  
-![](Chapter05/image209.jpeg)   
+![](image/image209.jpeg)   
 
 ## 5.2 Rescaling rasters
 
@@ -156,7 +156,7 @@ To do this, perform the following steps:
 Save to a temporary file or Save to file:  
 
 
-![](Chapter05/image210.png)
+![](image/image210.png)
 
 ## 5.3 Creating a raster mosaic
 
@@ -194,7 +194,7 @@ The following screenshot shows the Merge command that is configured to mosaic
 the collection of input rasters. The equivalent command-line syntax is displayed in
 the window:  
 
-![](Chapter05/image213.png)
+![](image/image213.png)
 
 >  There are two additional tools in QGIS that can be used to create raster mosaics.  
 Both of these require the rasters to be merged and loaded into the QGIS map canvas.  
@@ -208,7 +208,7 @@ It also allows you to choose the interpolation method.
 See the following figure:   
 
 
-![](Chapter05/image215.png)
+![](image/image215.png)
 
 
 ```python

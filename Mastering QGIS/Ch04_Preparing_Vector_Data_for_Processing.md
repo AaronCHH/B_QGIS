@@ -30,7 +30,7 @@ The __Merge Shapefies to One__ tool that can be found by navigating to __Vector 
   
 
 
-![](Chapter04/fig4_2.PNG)
+![](image/fig4_2.PNG)
 
 In the Merge shapefies dialog, you have the option to choose whether you wish to merge all shapefies in a folder or pick individual shapefies to merge.  
 1. Depending on how your shapefies are stored, you can do either of the following:  
@@ -52,7 +52,7 @@ Click on __OK__ to create the spatial indexes.
   
 
 
-![](Chapter04/fig4_2-2.PNG)
+![](image/fig4_2-2.PNG)
 
 ## 4.3 Checking for geometry errors
 
@@ -68,7 +68,7 @@ The tool found 267 errors.
 The errors still need to be repaired, but at least you now know where they are!   
 
 
-![](Chapter04/fig4_3.PNG)
+![](image/fig4_3.PNG)
 
 > If you have a layer with hundreds or thousands of errors, the most elegant way to repair them is to use the GRASS GIS plugin to import them into a GRASS database.  
 GRASS uses a topological vector data model.  
@@ -88,7 +88,7 @@ Sometimes, you may want to convert geometries for cartographic reasons, such as 
 The following tools can be found on the __Geometry Tools__ menu under __Vector__:   
 
 
-![](Chapter04/fig4_4.PNG)
+![](image/fig4_4.PNG)
 
 ### 4.4.1 Creating polygon centroids
 
@@ -100,7 +100,7 @@ With the data in point form, you can generate a heat map, compute densities, or 
   
 
 
-![](Chapter04/fig4_4_1.PNG)
+![](image/fig4_4_1.PNG)
 
 ### 4.4.2 Converting polygons to lines and lines to polygons
 
@@ -150,7 +150,7 @@ However, several of these counties include multiple islands.
 To illustrate this point, the following fiure shows a single record selected in the attribute table that selects multiple polygons that are tied to the single record:   
   
 
-![](Chapter04/fig4_4_6.PNG)
+![](image/fig4_4_6.PNG)
 
   
 Using the __Multipart to Singleparts tool__, which can be found by navigating to __Vector | Geometry Tools__, with Hawaii_counties.shp as the input, we generate a singlepart shapefie with 32 features.  
@@ -158,7 +158,7 @@ The following fiure shows that __a single polygon is now tied to a single record
   
   
 
-![](Chapter04/fig4_4_6-2.PNG)
+![](image/fig4_4_6-2.PNG)
 
 The __Singleparts to Multipart tool__, which can be found by navigating to __Vector | Geometry Tools__, generates a multipart layer based on an attribute you specify in the Unique ID fild input.  
 The options of the Singleparts to Multipart tool are shown in the following screenshot:   
@@ -414,9 +414,9 @@ First, we will select the SEUL and SWNI coalition neighborhoods from Neighborhoo
 4. With "COALIT" still selected in Function list, click on the all unique button to load a list of all unique values found in the fild. Double-click on 'SEUL' to add it to the Expression area after the equal sign.  
 5. As we want to choose either SEUL or SWNI coalition neighborhoods, we will use the Boolean OR operator to connect the two expressions together. In Function list, expand the Operators node and double-click on OR to add it to the end of the expression.  
 6. Using what you learned so far, add "COALIT" = 'SWNI'  to the end of the expression. The completed expression is shown in the following screenshot:  
-![](Chapter04/fig4_8-1.PNG)
+![](image/fig4_8-1.PNG)
 7. Click on Select to perform the aspatial selection. Close the Select by expression window and the attribute table to view the results on the map. The following fiure shows the selected neighborhoods.  
-![](Chapter04/fig4_8-2.PNG)  
+![](image/fig4_8-2.PNG)  
 
 With the two coalitions selected, we will next perform a spatial selection to determine which schools are within the selected neighborhoods. To do this, perform the following steps:  
 1. Navigate to __Vector | Spatial Query | Spatial Query__ from the QGIS menu bar to open the Spatial Query window. This window allows features from one layer to be selected based on their spatial relationship with the features in a different layer. Depending on the geometry of the two layers, the spatial relationships will change to match the appropriate selections that are available.  
@@ -425,7 +425,7 @@ With the two coalitions selected, we will next perform a spatial selection to de
 4. In the Reference features of section, choose Neighborhoods_pdx. Keep 46 selected geometries selected. With this selected, only the currently selected neighborhoods will be used for the spatial query.  
 5. For the And use the result to fild, choose Create new selection.  
 6. Click on Apply to execute the query. Once complete, the Spatial Query window will expand to display the results. The following screenshot shows the expanded Spatial Query window. You can select individual result feature IDs and select Zoom to item to center the map on the selected item. Note that the window still contains the original spatial query, so it is possible to modify the query and execute it again. In addition, note that you can view log messages of the query. Lastly, you can create a temporary layer to the map from the selected features by clicking on the Create layer with selected button ( ).
-![](Chapter04/fig4_8-3.PNG)  
+![](image/fig4_8-3.PNG)  
 7. Click on Close to dismiss the Spatial Query window. On the map, the schools layer will have the selected records that fall within the two selected coalition neighborhoods. The last step is to select only the elementary schools from the selection.  
 8. Open the attribute table of schools. Click on the Select features using an expression button  to open the Select by expression window.  
 9. Using what you have learned so far, create this expression: "LEVEL" = 'Elementary'.  
