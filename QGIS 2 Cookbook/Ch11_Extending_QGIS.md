@@ -823,10 +823,8 @@ To restore the database from the backup, perform the following steps:
 A restore options dialog will be opened, as shown in the following screenshot:  
 > It is worth mentioning that the pg_restore tool used by pgAdmin to restore cannot create the database that has to be restored.  
 It is necessary to create a new empty database manually and then start the restoration with this freshly created database.  
-  
 5. Select the location of the backup file and adjust the restore options according to your needs.  
 > Note that you can restore single table or schema, just click on the Display objects button after selecting the backup file and choose desired objects on the Objects tab.  
-  
 6. Click on the Restore button to start restoring. The progress will be displayed in the Messages tab.  
   
   
