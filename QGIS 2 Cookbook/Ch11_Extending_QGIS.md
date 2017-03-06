@@ -567,7 +567,6 @@ The script contains mainly two parts:
 This is used to define the semantics of the algorithm, along with some additional information, such as the name and group of the algorithm.  
 * A part that takes the inputs entered by the user and processes them to generate the outputs.  
 This is where the algorithm itself is located.  
-  
 In our example, the first part looks like the following:  
 ```py  
 ##Cookbook=group  
@@ -576,6 +575,7 @@ In our example, the first part looks like the following:
 ##Area=number 1  
 ##Output=output vector  
 ```  
+
 We are defining two inputs (the layer and the area value) and declaring one output (the filtered layer).  
 These elements are defined using the Python comments with a double Python comment sign (#).  
 The second part includes the code itself and looks like the following:  
@@ -584,11 +584,12 @@ layer = processing.getObject(Vector_layer)
 provider = layer.dataProvider()  
 writer = processing.VectorWriter(Output, None, provider.fields(), provider.geometryType(), layer.crs())  
 for feature in processing.features(layer):  
-print feature.geometry().area()  
+    print feature.geometry().area()  
 if feature.geometry().area() > Area:  
-writer.addFeature(feature)  
+    writer.addFeature(feature)  
 del writer  
 ```  
+
 The inputs that we defined in the first part will be available here, and we can use them.  
 In the case of the area, we will have a variable named Area, containing a number.  
 In the case of the vector layer, we will have a Layer variable, containing a string with the source of the selected layer.  
