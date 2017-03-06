@@ -157,7 +157,6 @@ Typically, you will get them zipped and must extract the zip to a real system fo
 3. Select Directory instead of File for the Source type option.    
 4. From the Type dropdown, pick OpenFileGDB.    
 5. Now, choose Browse and navigate to the naturalearthsample.gdb folder (if you haven't unzipped this already you need to do this first).    
-    
 > Yes, it's a little odd to have .gdb on the end of a folder as this makes it look like a file.    
 This just seems to be the standard convention.    
     
